@@ -1,0 +1,9 @@
+{
+  "name": "Super Mario JS",
+  "version": "1.0.0",
+  "description": "Remembering javascript",
+  "main": "index.js",
+  "author": "Patrício Moreira",
+  "license": "Yes",
+  "private": false
+}
