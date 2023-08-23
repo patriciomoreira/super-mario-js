@@ -2,8 +2,9 @@
   "name": "super-mario-js",
   "version": "1.0.0",
   "description": "Remembering javascript",
-  "main": "index.js",
+  "main": "index.html",
   "author": "Patrício Moreira",
   "license": "Yes",
-  "private": false
+  "private": false,
+  "dependencies": {}
 }
