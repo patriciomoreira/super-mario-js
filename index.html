@@ -9,8 +9,19 @@
 </head>
 <body>
 
-	<h1 class="titulo">Super Mario em HTML, CSS e JavaScript</h1>
-	<div class="game"></div>
+	<div class="game">
+		<img class="clouds" src="img/clouds.png" alt="pipe">
+		<img class="pipe" src="img/pipe.png" alt="pipe">
+		<img class="mario" src="img/mario.gif" alt="pipe">
+
+		<div class="game-over">
+			<p>GAME OVER</p>
+			<button class="botao" onclick="location.reload()">RESTART</button>
+		</div>
+	</div>
+	<div class="controle">
+		<button class="btnUp botao">⇧</button>
+	</div>
 
 	<script src="./script/source.js"></script>
 </body>

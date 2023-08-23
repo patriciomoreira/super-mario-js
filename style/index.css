@@ -1,27 +1,180 @@
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	background-color: #4dc412 ;
 }
 
-.titulo{
+.titulo {
 	margin: 20px 10px;
+	text-align: center;
+	justify-content: center;
+}
+
+.game {
+	background: linear-gradient(#00c4f5, #fff);
+	width: 100%;
+	/* 80% of the viewport height */
+	height: 80vh;
+	/* 80% of the viewport height */
+	margin: 0 auto;
+	border-bottom: #4dc412 solid 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.pipe {
+	position: absolute;
+	bottom: 0;
+	width: 50px;
+	animation: movePipe 1.5s infinite linear;
+}
+
+.mario {
+	position: absolute;
+	bottom: 0;
+	width: 100px;
+	display: block;
+}
+
+.jump {
+	animation: jump 500ms ease-out;
+}
+
+.clouds {
+	position: absolute;
+	top: 0;
+	width: 600px;
+	animation: moveClouds 10s infinite linear;
+}
+
+.game-over {
+	font-family: monospace;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: red;
+	padding: 20px;
+	font-size: 5vh;
+	text-align: center;
+	display: none;
+}
+
+.controle {
+	padding: 20px;
 	text-align: center;
 }
 
-.game{
-	background-color: aqua;
-	width: 70vh; /* 80% of the viewport height */
-	height: 70vh; /* 80% of the viewport height */
-	margin: 0 auto;
+.botao {
+	color: white;
+	font-size: x-large;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background-color: #FFA12B;
+	position: relative;
+	padding: 20px 40px;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-shadow: 0px 1px 0px #000;
+	filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+	-webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+	-moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+	box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
+
+.botao:active {
+	top: 10px;
+	background-color: #F78900;
+
+	-webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+	-moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+	box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.botao:after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	padding: 4px;
+	position: absolute;
+	bottom: -15px;
+	left: -4px;
+	z-index: -1;
+	background-color: #2B1800;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+@keyframes jump {
+	0% {
+		bottom: 0;
+	}
+	
+	20% {
+		bottom: 100px;
+	}
+
+	40% {
+		bottom: 120px;
+	}
+
+	50% {
+		bottom: 120px;
+	}
+
+	60% {
+		bottom: 120px;
+	}
+
+	60% {
+		bottom: 100px;
+	}
+
+	100% {
+		bottom: 0px;
+	}
+}
+
+@keyframes movePipe {
+	from {
+		right: 0px;
+	}
+
+	to {
+		right: 100%;
+	}
+}
+
+@keyframes moveClouds {
+	from {
+		right: -300px;
+	}
+
+	to {
+		right: 100%;
+	}
+}
+
 
 /* Media query para larguras de tela menores que 700px */
 @media (max-width: 700px) {
 	.game {
 		width: 50vh;
 		/* 60% of the viewport height */
-		height: 50vh; 
+		height: 50vh;
 		/* 60% of the viewport height */
+	}
+
+	.pipe {
+		animation: movePipe 1s infinite linear;
 	}
 }
