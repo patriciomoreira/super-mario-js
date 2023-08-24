@@ -177,4 +177,8 @@ body {
 	.pipe {
 		animation: movePipe 1s infinite linear;
 	}
+
+	.btnUp{
+		margin-top: 100px;
+	}
 }
