@@ -167,13 +167,6 @@ body {
 
 /* Media query para larguras de tela menores que 700px */
 @media (max-width: 700px) {
-	.game {
-		width: 50vh;
-		/* 60% of the viewport height */
-		height: 50vh;
-		/* 60% of the viewport height */
-	}
-
 	.pipe {
 		animation: movePipe 1s infinite linear;
 	}
